@@ -1,0 +1,10 @@
+{
+  "name": "moltenvk-vcpkg-test",
+  "version-string": "0.0.1",
+  "description": "Testing",
+  "dependencies": 
+  [
+    "moltenvk",
+    "glfw3"
+  ]
+}
