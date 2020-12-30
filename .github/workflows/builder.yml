@@ -34,7 +34,9 @@ jobs:
       run: |
         cd ./extern/vcpkg/buildtrees/moltenvk/
         ls -la
-        tail -n 1000 x64-osx-dbg
+        tail -n 1000 stdout-x64-osx.log
+        cd x64-osx-dbg
+        ls -la
     - name: Build
       run: |
         cd ./build
