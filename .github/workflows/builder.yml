@@ -17,7 +17,7 @@ jobs:
         submodules: 'true'
     - name: Install Vulkan SDK
       run: |
-        curl -L "https://vulkan.lunarg.com/sdk/home#sdk/downloadConfirm/latest/mac/vulkan-sdk.dmg" -o vulkan-sdk.dmg
+        curl -L "https://sdk.lunarg.com/sdk/download/1.2.162.0/mac/vulkansdk-macos-1.2.162.0.dmg?u=" -o vulkan-sdk.dmg
         ls -la
         hdiutil mount "./vulkan-sdk.dmg" -verbose
         ls -la
