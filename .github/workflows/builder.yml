@@ -19,10 +19,11 @@ jobs:
       run: |
         curl -L "https://sdk.lunarg.com/sdk/download/1.2.162.0/mac/vulkansdk-macos-1.2.162.0.dmg?u=" -o vulkan-sdk.dmg
         hdiutil mount "./vulkan-sdk.dmg"
-        cd /volumes
+        cp -R "/volumes/vulkansdk-macos-1.2.162.0" "./"
         cd ./vulkansdk-macos-1.2.162.0
         ls -la
         sudo ./install_vulkan.py
+        sudo chmod +x "./setup-env.sh"
         sudo ./setup-env.sh
     - name: Generate Solution
       run: |
