@@ -19,13 +19,16 @@ jobs:
       run: |
         curl -L "https://sdk.lunarg.com/sdk/download/1.2.162.0/mac/vulkansdk-macos-1.2.162.0.dmg?u=" -o vulkan-sdk.dmg
         hdiutil mount "./vulkan-sdk.dmg"
-        cp -R "/volumes/vulkansdk-macos-1.2.162.0" "./"        
-    - name: Upload
-      uses: actions/upload-artifact@v2
-      with:
-        name: molten-vk
-        path: |
-          ./vulkansdk-macos-1.2.162.0
+        cp -R "/volumes/vulkansdk-macos-1.2.162.0" "./"
+        cd ./vulkansdk-macos-1.2.162.0
+        ls -la
+        sudo ./install_vulkan.py
+        sudo chmod +x "./setup-env.sh"
+        sudo ./setup-env.sh
+        echo "VULKAN_SDK" $VULKAN_SDK
+        echo "DYLD_LIBRARY_PATH" $DYLD_LIBRARY_PATH
+        vkvia
+        vulkaninfo
     - name: Generate Solution
       run: |
         mkdir "build"
