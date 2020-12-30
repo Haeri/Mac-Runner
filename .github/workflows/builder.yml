@@ -32,9 +32,9 @@ jobs:
     - name: Debug
       if: ${{ failure() }}
       run: |
-        cd ./build
+        cd ./extern/vcpkg/buildtrees/moltenvk/
         ls -la
-        tail -n 1000 vcpkg-manifest-install.log
+        tail -n 1000 x64-osx-dbg
     - name: Build
       run: |
         cd ./build
