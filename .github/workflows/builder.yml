@@ -23,7 +23,7 @@ jobs:
         cd ./vulkansdk-macos-1.2.162.0
         ls -la
         sudo ./install_vulkan.py
-        export VULKAN_SDK=./macOS
+        export VULKAN_SDK="$PWD/macOS/"
         export PATH=$VULKAN_SDK/bin:$PATH
         export DYLD_LIBRARY_PATH=$VULKAN_SDK/lib:$DYLD_LIBRARY_PATH
         export VK_ICD_FILENAMES=$VULKAN_SDK/etc/vulkan/icd.d/MoltenVK_icd.json
