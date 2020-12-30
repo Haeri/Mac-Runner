@@ -4,7 +4,6 @@
   "description": "Testing",
   "dependencies": 
   [
-    "moltenvk",
-    "glfw3"
+    "moltenvk"
   ]
 }

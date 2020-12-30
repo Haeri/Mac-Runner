@@ -8,7 +8,6 @@
     "cereal",
     "glslang",
     "spirv-cross",
-    "vulkan",
     "vulkan-headers"
   ]
 }
