@@ -21,7 +21,9 @@ jobs:
         ls -la
         hdiutil attach vulkan-sdk.dmg
         ls -la
-        cd /Volumes/vulkan-sdk
+        cd /volumes
+        ls -la
+        cd ./vulkan-sdk
         ls -la
         sudo ./install_vulkan.py
     - name: Generate Solution
