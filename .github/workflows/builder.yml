@@ -22,7 +22,10 @@ jobs:
         cd /volumes
         cd ./vulkansdk-macos-1.2.162.0
         ls -la
+        tail -n 1000 install_vulkan.py
         sudo ./install_vulkan.py
+        sudo chmod +x setup-env.sh
+        ./setup-env.sh
     - name: Generate Solution
       run: |
         mkdir "build"
