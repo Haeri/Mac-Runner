@@ -19,9 +19,9 @@ jobs:
       run: |
         curl -L "https://vulkan.lunarg.com/sdk/home#sdk/downloadConfirm/latest/mac/vulkan-sdk.dmg" -o vulkan-sdk.dmg
         ls -la
-        hdiutil mount vulkan-sdk.dmg
+        hdiutil attach vulkan-sdk.dmg
         ls -la
-        cd vulkan-sdk
+        cd /Volumes/vulkan-sdk
         ls -la
         sudo ./install_vulkan.py
     - name: Generate Solution
